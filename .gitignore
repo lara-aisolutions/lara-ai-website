@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.bak
+*~
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Build output (if a build step is added)
+dist/
+build/
+
+# Environment / secrets (never commit these)
+.env
+.env.local
+.env.*

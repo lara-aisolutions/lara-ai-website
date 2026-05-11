@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LARA.ai — Claude-Powered AI Solutions Studio, Delhi</title>
+  <meta name="description" content="LARA.ai is a Delhi-based AI solutions studio building production-grade Claude-powered products. Claude API integration, agentic workflows, MCP servers, and AI strategy consulting.">
+  <meta name="keywords" content="Claude AI, Anthropic partner, AI solutions India, Claude API integration, agentic workflow, MCP server, Delhi AI studio">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LARA.ai — Claude-Powered AI Solutions">
+  <meta property="og:description" content="We build production-grade Claude-powered products. Based in Delhi, India. On the Anthropic Partner Network track.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lara-ai.in">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="logo/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="logo/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="logo/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="logo/favicon-128.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="logo/favicon-256.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="logo/favicon-128.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor (hidden on mobile via CSS) -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#claude">Partner Track</a>
+  <a href="#services">Services</a>
+  <a href="#team">Team</a>
+  <a href="#contact" class="mobile-cta">Let's Build →</a>
+</div>
+
+<!-- ========================================================
+     NAV
+     ======================================================== -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="LARA.ai home">
+    <img src="logo/website-navbar-logo.png"
+         alt="LARA.ai"
+         onerror="this.parentElement.innerHTML='<span class=nav-logo-text>LARA<span>.</span>ai</span>'">
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#claude">Partner Track</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Build →</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- ========================================================
+     HERO
+     ======================================================== -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <!-- Hero logo mark (top-right) -->
+  <div class="hero-logo-mark" aria-hidden="true">
+    <img src="logo/lara-logo-transparent.png" alt="">
+  </div>
+
+  <div class="hero-badge" aria-label="Partner status">
+    Powered by Claude &middot; Anthropic Partner Track
+  </div>
+
+  <h1>We Build<br><em>AI That</em><br>Works.</h1>
+
+  <div class="hero-sub">
+    <p class="hero-desc">
+      LARA.ai is a Delhi-based AI solutions studio. We design, build, and deploy
+      production-grade Claude-powered products for real clients, real problems,
+      and real results — across industries.
+    </p>
+    <div class="hero-stats" aria-label="Key stats">
+      <div class="stat-item">
+        <div class="stat-num">5<span>+</span></div>
+        <div class="stat-label">Products Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Claude-Powered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5<span></span></div>
+        <div class="stat-label">Active Courses</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- ========================================================
+     ABOUT
+     ======================================================== -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="about-left reveal">
+    <div class="section-label">Who We Are</div>
+    <h2 id="about-heading">Small Team.<br><span>Serious</span> AI.</h2>
+    <p>
+      LARA.ai was founded by Latika Sharma with a single conviction: AI should
+      solve real problems, not just demo well. We are a boutique AI studio in
+      Delhi that designs, builds, and deploys Claude-powered solutions for
+      businesses that want to move fast and think smart.
+    </p>
+    <p>
+      Every product we ship runs on Anthropic's Claude — not as a wrapper, but
+      as the core intelligence. From political campaign technology to AI-powered
+      marketing tools, we've built across industries because good AI architecture
+      doesn't care about verticals.
+    </p>
+    <p>
+      We are India's most focused Claude implementation studio — an MSME by
+      registration, but building at the level of teams ten times our size.
+    </p>
+    <div class="founder-note">
+      <blockquote>
+        "We didn't start LARA to chase the AI hype. We started it because we
+        saw what Claude could actually do — and realised that most businesses
+        in India had no way to access that capability. That's the gap we fill."
+      </blockquote>
+      <cite>— Latika Sharma, Founder &amp; CEO</cite>
+    </div>
+  </div>
+
+  <div class="about-right">
+    <div class="capability-card reveal reveal-delay-1">
+      <div class="cap-num">01</div>
+      <div class="cap-title">AI Product Development</div>
+      <div class="cap-desc">Full-cycle development of Claude-powered SaaS tools, mobile apps, and web platforms — architected for production from day one.</div>
+    </div>
+    <div class="capability-card reveal reveal-delay-2">
+      <div class="cap-num">02</div>
+      <div class="cap-title">Political &amp; Campaign Technology</div>
+      <div class="cap-desc">AI-assisted campaign tools, political websites, and digital infrastructure for election strategy teams — built and deployed in India.</div>
+    </div>
+    <div class="capability-card reveal reveal-delay-3">
+      <div class="cap-num">03</div>
+      <div class="cap-title">AI Consulting &amp; Integration</div>
+      <div class="cap-desc">Claude API integration, agentic workflow design, MCP server development, and AI-first process transformation for your business.</div>
+    </div>
+    <div class="capability-card reveal reveal-delay-4">
+      <div class="cap-num">04</div>
+      <div class="cap-title">Digital Marketing + AI</div>
+      <div class="cap-desc">Meta and Google Ads managed with AI-assisted creative, audience targeting, and performance analytics — sharper than any traditional agency.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     PRODUCTS
+     ======================================================== -->
+<section class="products" id="products" aria-labelledby="products-heading">
+  <div class="products-header reveal">
+    <div>
+      <div class="section-label">What We've Built</div>
+      <h2 id="products-heading">Products in<br>Production.</h2>
+    </div>
+    <p class="products-header-note">
+      All five are live, Claude-powered, and serving real users.
+      Every build sharpens our architecture further.
+    </p>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product-card reveal">
+      <div class="product-icon" aria-hidden="true">🚀</div>
+      <div class="product-name">PagePilot</div>
+      <div class="product-desc">
+        AI-powered landing page generation engine. Input a brief, get a
+        conversion-optimised page — copy, structure, CTA hierarchy, and
+        messaging architecture included.
+      </div>
+      <div class="product-outcome-label">Outcome</div>
+      <div class="product-outcome">
+        Agencies reduce landing page turnaround from days to minutes, with
+        Claude handling the copywriting intelligence layer.
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">Claude API</span>
+        <span class="product-tag">SaaS</span>
+        <span class="product-tag">MarTech</span>
+      </div>
+      <div class="product-tech">Stack: <strong>Claude + FastAPI + React</strong></div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-icon" aria-hidden="true">🎙️</div>
+      <div class="product-name">VoiceBridge</div>
+      <div class="product-desc">
+        Multilingual voice AI solution bridging language barriers for Indian
+        businesses. Real-time transcription, translation, and response
+        generation across Assamese, Hindi, and English.
+      </div>
+      <div class="product-outcome-label">Outcome</div>
+      <div class="product-outcome">
+        Businesses in Northeast India can now service customers in their
+        native language using a Claude-powered voice layer.
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">Voice AI</span>
+        <span class="product-tag">Multilingual</span>
+        <span class="product-tag">India</span>
+      </div>
+      <div class="product-tech">Stack: <strong>Claude + Whisper + FastAPI</strong></div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-icon" aria-hidden="true">📊</div>
+      <div class="product-name">HashScope</div>
+      <div class="product-desc">
+        Social media hashtag intelligence tool that surfaces trending
+        opportunities, audience signals, and competitive positioning
+        in real time — for every post, every platform.
+      </div>
+      <div class="product-outcome-label">Outcome</div>
+      <div class="product-outcome">
+        Marketing teams replace manual hashtag research with AI-curated
+        recommendations that adapt to what's trending right now.
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">Social AI</span>
+        <span class="product-tag">Analytics</span>
+        <span class="product-tag">Marketing</span>
+      </div>
+      <div class="product-tech">Stack: <strong>Claude + Python + Playwright</strong></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-icon" aria-hidden="true">🗳️</div>
+      <div class="product-name">RahulBrigade</div>
+      <div class="product-desc">
+        Mobile application powering political campaign coordination at
+        scale — volunteer management, message broadcast, booth-level
+        ground ops, and real-time field reporting.
+      </div>
+      <div class="product-outcome-label">Outcome</div>
+      <div class="product-outcome">
+        Campaign managers coordinate thousands of volunteers from a
+        single screen, with Claude handling communication and summarisation.
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">Political Tech</span>
+        <span class="product-tag">Mobile App</span>
+        <span class="product-tag">Claude Code</span>
+      </div>
+      <div class="product-tech">Stack: <strong>Claude Code + React Native</strong></div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-icon" aria-hidden="true">🌐</div>
+      <div class="product-name">incpuducherry.in</div>
+      <div class="product-desc">
+        Full political party website for INC Puducherry — designed,
+        developed, and deployed end-to-end using Claude Code.
+        Zero traditional dev pipeline. Zero handoffs.
+      </div>
+      <div class="product-outcome-label">Outcome</div>
+      <div class="product-outcome">
+        A production political website built entirely through Claude Code,
+        proving AI-native development at professional quality.
+        <a href="https://incpuducherry.in" target="_blank" rel="noopener" style="color:var(--accent);font-weight:500;">incpuducherry.in ↗</a>
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">Claude Code</span>
+        <span class="product-tag">Web</span>
+        <span class="product-tag">Live</span>
+      </div>
+      <div class="product-tech">Built entirely with <strong>Claude Code</strong></div>
+    </div>
+
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-icon" aria-hidden="true">⚡</div>
+      <div class="product-name">More Coming</div>
+      <div class="product-desc">
+        We ship constantly. Every client engagement and internal
+        experiment becomes a reusable product. Our pipeline is always
+        full — and always Claude.
+      </div>
+      <div class="product-outcome-label">In the pipeline</div>
+      <div class="product-outcome">
+        New products in development spanning e-commerce, HR automation,
+        and regional language AI tools for India's tier-2 markets.
+      </div>
+      <div class="product-tags">
+        <span class="product-tag">In Progress</span>
+        <span class="product-tag">2026</span>
+      </div>
+      <div class="product-tech">Powered by <strong>Claude · Always</strong></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================================================
+     CLAUDE PARTNER / CERTIFICATIONS
+     ======================================================== -->
+<section class="claude-section" id="claude" aria-labelledby="claude-heading">
+  <div class="claude-inner">
+
+    <div class="claude-left reveal">
+      <div class="section-label">Anthropic Partnership</div>
+      <h2 id="claude-heading">Built on<br><em>Claude.</em><br>All of it.</h2>
+
+      <div class="academy-badge">Anthropic Academy · Active Learners</div>
+
+      <p>
+        LARA.ai is on the Claude Partner Network track. We don't use Claude as
+        a plugin — it is our architecture. Every product, every workflow, every
+        client engagement runs through Claude.
+      </p>
+      <p>
+        We are Anthropic Academy certified and actively deepening our technical
+        expertise across the full Claude ecosystem: API, Claude Code, MCP, and
+        Agentic Workflows.
+      </p>
+
+      <div class="claude-certs" role="list" aria-label="Anthropic Academy certifications">
+
+        <!-- Completed -->
+        <div class="cert-item" role="listitem">
+          <div class="cert-header">
+            <div class="cert-check" aria-label="Completed">✓</div>
+            <div class="cert-text">
+              <strong>AI Fluency: Framework &amp; Foundations</strong>
+              <span class="cert-meta">Completed Aug 2025</span>
+            </div>
+            <span class="cert-score">10 / 10</span>
+          </div>
+        </div>
+
+        <div class="cert-item" role="listitem">
+          <div class="cert-header">
+            <div class="cert-check" aria-label="Completed">✓</div>
+            <div class="cert-text">
+              <strong>Claude 101</strong>
+              <span class="cert-meta">Certified April 2026</span>
+            </div>
+            <span class="cert-score">Certified</span>
+          </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="cert-item in-progress" role="listitem">
+          <div class="cert-header">
+            <div class="cert-check" aria-label="In progress">→</div>
+            <div class="cert-text">
+              <strong>Building with the Claude API</strong>
+              <span class="cert-meta">In Progress · 24 of 85 lessons</span>
+            </div>
+          </div>
+          <div class="cert-progress" aria-label="Progress: 28%">
+            <div class="cert-progress-fill" style="width:28%" data-width="28%"></div>
+          </div>
+        </div>
+
+        <div class="cert-item in-progress" role="listitem">
+          <div class="cert-header">
+            <div class="cert-check" aria-label="In progress">→</div>
+            <div class="cert-text">
+              <strong>Claude Code in Action</strong>
+              <span class="cert-meta">In Progress · 3 of 21 lessons</span>
+            </div>
+          </div>
+          <div class="cert-progress" aria-label="Progress: 14%">
+            <div class="cert-progress-fill" style="width:14%" data-width="14%"></div>
+          </div>
+        </div>
+
+        <!-- Enrolled -->
+        <div class="cert-item enrolled" role="listitem">
+          <div class="cert-header">
+            <div class="cert-check" aria-label="Enrolled">○</div>
+            <div class="cert-text">
+              <strong>Introduction to Agent Skills</strong>
+              <span class="cert-meta">Enrolled May 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="partner-callout">
+        <p>
+          <strong>On the Claude Partner Network track.</strong> As an MSME in India,
+          LARA.ai is proof that serious Claude implementation doesn't require a large
+          team — it requires the right architecture and commitment to the ecosystem.
+        </p>
+      </div>
+    </div>
+
+    <div class="claude-right reveal reveal-delay-2">
+      <div class="claude-metric">
+        <div class="metric-num">100%</div>
+        <div class="metric-label">Claude-powered<br>implementations</div>
+      </div>
+      <div class="claude-metric">
+        <div class="metric-num">5+</div>
+        <div class="metric-label">Production deployments<br>using Claude</div>
+      </div>
+      <div class="claude-metric">
+        <div class="metric-num">Daily</div>
+        <div class="metric-label">Active learners on<br>Anthropic Academy</div>
+      </div>
+      <div class="claude-metric">
+        <div class="metric-num">India</div>
+        <div class="metric-label">Carrying Claude into<br>underserved markets</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================================================
+     SERVICES
+     ======================================================== -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="services-header reveal">
+    <div class="section-label">What We Offer</div>
+    <h2 id="services-heading">From Idea<br>to Deployment.</h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-title">Claude API Integration</div>
+      <div class="service-desc">
+        We plug Claude into your existing product or build new capabilities
+        from scratch — structured outputs, tool use, multi-turn systems,
+        and agentic loops that actually work in production.
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">02</div>
+      <div class="service-title">Agentic Workflow Design</div>
+      <div class="service-desc">
+        Multi-agent systems that work autonomously — research pipelines,
+        data extraction agents, campaign automation, and document
+        processing flows designed for reliability.
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">03</div>
+      <div class="service-title">MCP Server Development</div>
+      <div class="service-desc">
+        Custom Model Context Protocol servers that give Claude real-time
+        access to your tools, databases, APIs, and internal systems —
+        extending intelligence directly into your stack.
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">04</div>
+      <div class="service-title">Claude Code Deployments</div>
+      <div class="service-desc">
+        End-to-end development using Claude Code — from CLAUDE.md
+        architecture to production deployment, built faster and more
+        cost-effectively than any traditional development team.
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">05</div>
+      <div class="service-title">AI Strategy Consulting</div>
+      <div class="service-desc">
+        Where to start, what to build, how to measure ROI. We help
+        businesses map their AI opportunity and execute it with Claude
+        at the centre — practical, not theoretical.
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">06</div>
+      <div class="service-title">Political &amp; Campaign AI</div>
+      <div class="service-desc">
+        AI tools built for election campaigns — content generation,
+        volunteer coordination, digital outreach, constituency
+        intelligence, and ground-level data analysis.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     TEAM
+     ======================================================== -->
+<section class="team" id="team" aria-labelledby="team-heading">
+  <div class="team-header reveal">
+    <div class="section-label">The People</div>
+    <h2 id="team-heading">Two Builders.<br><span>One Mission.</span></h2>
+  </div>
+
+  <div class="team-grid">
+
+    <div class="team-card reveal">
+      <div class="team-role-badge">Founder &amp; CEO</div>
+      <div class="team-name">Latika Sharma</div>
+      <div class="team-title">Product Vision · Client Strategy · Business Development</div>
+      <p class="team-bio">
+        Latika founded LARA.ai on a conviction that India's businesses deserve
+        access to world-class AI — built with care, not just deployed as a
+        chatbot. She leads product direction, shapes client engagements from
+        brief to delivery, and drives LARA's mission to make Claude-powered
+        products the default for businesses that want to think seriously about AI.
+      </p>
+      <p class="team-bio">
+        Anthropic Academy certified with a perfect score in AI Fluency:
+        Framework &amp; Foundations. Currently active in four concurrent courses
+        across the Anthropic Academy curriculum.
+      </p>
+      <div class="team-skills">
+        <span class="team-skill">Product Strategy</span>
+        <span class="team-skill">AI Consulting</span>
+        <span class="team-skill">Claude API</span>
+        <span class="team-skill">Campaign AI</span>
+        <span class="team-skill">Digital Marketing</span>
+      </div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-2">
+      <div class="team-role-badge">Co-founder · AI Architect &amp; Tech Lead</div>
+      <div class="team-name">Ravi Verma</div>
+      <div class="team-title">Architecture · Claude Integrations · Infrastructure</div>
+      <p class="team-bio">
+        Ravi architects every technical decision at LARA — from API integration
+        patterns to Claude Code deployments. He ensures that every product LARA
+        ships is built with production-grade reliability, clean architecture, and
+        the right Claude capabilities for the job.
+      </p>
+      <p class="team-bio">
+        He has personally architected all five of LARA's production deployments,
+        led the build of incpuducherry.in using Claude Code exclusively, and
+        developed LARA's internal MCP tooling and agentic workflow patterns.
+      </p>
+      <div class="team-skills">
+        <span class="team-skill">Claude API</span>
+        <span class="team-skill">Claude Code</span>
+        <span class="team-skill">MCP Servers</span>
+        <span class="team-skill">FastAPI</span>
+        <span class="team-skill">React / React Native</span>
+        <span class="team-skill">Agentic Systems</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="msme-note reveal">
+    <div class="msme-badge">
+      <div class="msme-badge-label">MSME</div>
+      <div class="msme-badge-sub">Registered · India</div>
+    </div>
+    <div class="msme-note-text">
+      <strong>Small by design, serious by conviction.</strong> LARA.ai is a
+      registered MSME in India — two founders building Claude-powered products
+      that compete with teams of twenty. We believe the right architecture and
+      deep AI expertise matter more than headcount. Our work proves it.
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================
+     CONTACT
+     ======================================================== -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+
+  <div class="contact-left reveal">
+    <div class="section-label">Let's Talk</div>
+    <h2 id="contact-heading">Ready to Build<br>with <em>Claude?</em></h2>
+    <p>
+      Whether you're a business exploring AI adoption, a marketing agency
+      looking for an edge, or a team that needs a Claude implementation
+      partner — we're the right people to call. Based in Delhi, building
+      across India and beyond.
+    </p>
+
+    <div class="contact-info">
+      <a href="mailto:raviverma@lara-ai.in" class="contact-row">
+        <div class="contact-icon" aria-hidden="true">✉️</div>
+        <div>
+          <div class="contact-text">raviverma@lara-ai.in</div>
+          <div class="contact-sub">For partnerships, projects, and enquiries</div>
+        </div>
+      </a>
+      <a href="https://lara-ai.in" class="contact-row">
+        <div class="contact-icon" aria-hidden="true">🌐</div>
+        <div>
+          <div class="contact-text">lara-ai.in</div>
+          <div class="contact-sub">Delhi, India</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-right reveal reveal-delay-2">
+    <h3>Start a Conversation</h3>
+    <p>Tell us what you're building. We'll tell you how Claude can make it better.</p>
+
+    <!--
+      Formspree integration.
+      Replace YOUR_FORM_ID with your actual Formspree endpoint.
+      See DEPLOYMENT.md for setup instructions.
+    -->
+    <form
+      id="contactForm"
+      class="contact-form"
+      action="https://formspree.io/f/xqenwrgr"
+      method="POST"
+      novalidate
+    >
+      <input
+        type="text"
+        name="name"
+        class="form-input"
+        placeholder="Your name"
+        required
+        autocomplete="name"
+      >
+      <input
+        type="email"
+        name="email"
+        class="form-input"
+        placeholder="Email address"
+        required
+        autocomplete="email"
+      >
+      <input
+        type="text"
+        name="company"
+        class="form-input"
+        placeholder="Company / Organisation"
+        autocomplete="organization"
+      >
+      <textarea
+        name="message"
+        class="form-input"
+        placeholder="What are you building? What do you need?"
+        required
+      ></textarea>
+      <!-- Hidden: helps Formspree label the source -->
+      <input type="hidden" name="_subject" value="New enquiry from lara-ai.in">
+      <button type="submit" class="btn-submit" id="submitBtn">Send Message →</button>
+    </form>
+
+    <div class="form-success" id="formSuccess" role="alert">
+      <p><strong>Message received.</strong><br>We'll get back to you within one business day.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer role="contentinfo">
+  <a href="#" class="footer-logo" aria-label="LARA.ai — back to top">
+    <img src="logo/website-navbar-logo.png"
+         alt="LARA.ai"
+         onerror="this.parentElement.innerHTML='<span class=footer-logo-text>LARA<span>.</span>ai</span>'">
+  </a>
+
+  <p>© 2026 LARA.ai &nbsp;·&nbsp; Delhi, India &nbsp;·&nbsp; Built with Claude</p>
+
+  <nav class="footer-right" aria-label="Footer navigation">
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#claude">Partner</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
