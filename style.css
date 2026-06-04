@@ -680,6 +680,187 @@ section { padding: 7rem 3rem; }
   color: var(--accent);
 }
 
+/* --- 7b. CLIENT WORK --- */
+
+.work-section {
+  background: var(--grey-100);
+  padding: 6rem 3rem;
+}
+
+.work-header {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.work-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-top: 0.5rem;
+}
+
+.work-header-note {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--grey-400);
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+  background: var(--grey-200);
+  border: 1.5px solid var(--grey-200);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-card {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.35s;
+  overflow: hidden;
+}
+
+.work-card:hover { background: var(--black); }
+
+.work-card-browser {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.2rem;
+  background: var(--grey-200);
+  border-bottom: 1.5px solid var(--grey-200);
+  transition: background 0.35s, border-color 0.35s;
+}
+
+.work-card:hover .work-card-browser {
+  background: #111;
+  border-color: #333;
+}
+
+.work-browser-dots { display: flex; gap: 4px; }
+
+.work-browser-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grey-400);
+  transition: background 0.35s;
+}
+
+.work-card:hover .work-browser-dots span { background: #444; }
+
+.work-browser-url {
+  flex: 1;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--grey-700);
+  letter-spacing: 0.01em;
+  transition: color 0.35s;
+}
+
+.work-card:hover .work-browser-url { color: var(--grey-400); }
+
+.work-browser-arrow {
+  font-size: 0.9rem;
+  color: var(--grey-400);
+  transition: color 0.35s, transform 0.25s;
+}
+
+.work-card:hover .work-browser-arrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.work-card-body {
+  padding: 2.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--grey-100);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.35s;
+}
+
+.work-card:hover .work-icon { background: rgba(255, 77, 0, 0.15); }
+
+.work-client {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+  transition: color 0.35s;
+}
+
+.work-card:hover .work-client { color: var(--white); }
+
+.work-sector {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.work-desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--grey-700);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  transition: color 0.35s;
+}
+
+.work-card:hover .work-desc { color: rgba(255, 255, 255, 0.5); }
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.work-tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  background: var(--grey-100);
+  border: 1px solid var(--grey-200);
+  border-radius: 2px;
+  transition: all 0.35s;
+}
+
+.work-card:hover .work-tag {
+  background: rgba(255, 77, 0, 0.1);
+  color: var(--accent-light);
+  border-color: rgba(255, 77, 0, 0.2);
+}
+
 /* --- 8. CLAUDE / CERTIFICATIONS --- */
 
 .claude-section {
@@ -1364,6 +1545,11 @@ footer p {
 
   .products-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .products-header-note { text-align: left; max-width: 100%; }
+
+  .work-section { padding: 4.5rem 1.5rem; }
+  .work-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .work-header-note { text-align: left; max-width: 100%; }
+  .work-grid { grid-template-columns: 1fr; }
 
   .team-grid { grid-template-columns: 1fr; gap: 2rem; }
 
