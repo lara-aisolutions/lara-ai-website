@@ -112,24 +112,6 @@
     reveals.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* --- Cert progress bars: animate when in view --- */
-  var progressBars = document.querySelectorAll('.cert-progress-fill');
-
-  if ('IntersectionObserver' in window && progressBars.length) {
-    var progressObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          progressObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    progressBars.forEach(function (bar) {
-      progressObserver.observe(bar);
-    });
-  }
-
   /* --- Contact form (Formspree async) --- */
   var contactForm    = document.getElementById('contactForm');
   var formSuccess    = document.getElementById('formSuccess');
@@ -165,7 +147,7 @@
           submitBtn.disabled = false;
           submitBtn.textContent = 'Try Again →';
         }
-        alert('Sorry, something went wrong. Please email us directly at hello@lara-ai.in');
+        alert('Sorry, something went wrong. Please email us directly at raviverma@lara-ai.in');
       }
     });
   }

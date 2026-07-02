@@ -33,3 +33,16 @@ build/
 .env
 .env.local
 .env.*
+
+# Local-only project log — contains credentials, never push
+experience.md
+
+# Business documents (KYC, certificates, signatures) — never push
+Office_Stationaries/
+*.docx
+
+# Browser automation artifacts
+.playwright-mcp/
+
+# Letterhead source
+LARA-ai Letterhead*.docx

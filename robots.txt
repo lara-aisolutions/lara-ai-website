@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lara-ai.in/sitemap.xml
