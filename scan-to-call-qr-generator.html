@@ -530,8 +530,11 @@
     var count = qr.getModuleCount();
     var quiet = 4; // QR spec minimum quiet zone — thinner borders risk misreads on some scanners
     var total = count + quiet * 2;
-    var px = 480; // internal render resolution for a crisp on-screen preview
-    var moduleSize = px / total;
+    // Pick an integer module size so every cell tiles pixel-exactly — no
+    // rounding-driven overlap bleeding dark modules into their neighbors
+    // (which is what was corrupting scans on real camera scanners).
+    var moduleSize = Math.max(1, Math.round(480 / total));
+    var px = moduleSize * total;
 
     canvas.width = px;
     canvas.height = px;
@@ -545,7 +548,7 @@
         if (qr.isDark(r, c)) {
           var x = (quiet + c) * moduleSize;
           var y = (quiet + r) * moduleSize;
-          ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(moduleSize) + 1, Math.ceil(moduleSize) + 1);
+          ctx.fillRect(x, y, moduleSize, moduleSize);
         }
       }
     }
@@ -623,7 +626,7 @@
         if (qr.isDark(r, c)) {
           var x = xMM + (quiet + c) * moduleMM;
           var y = yMM + (quiet + r) * moduleMM;
-          doc.rect(x, y, moduleMM + 0.02, moduleMM + 0.02, "F");
+          doc.rect(x, y, moduleMM, moduleMM, "F");
         }
       }
     }
