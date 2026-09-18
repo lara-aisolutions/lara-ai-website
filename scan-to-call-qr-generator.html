@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Scan-to-Call QR Code Generator for Phone Numbers | LARA.ai</title>
+<meta name="description" content="Create a free Scan-to-Call QR code for any phone number in seconds. No signup, no payment, works fully offline in your browser. Download a print-ready A6 PDF card instantly.">
+<meta name="keywords" content="QR code for phone number free India, scan to call QR code generator, free QR code maker India, call QR code PDF download, phone number QR code India, click to call QR code">
+<meta name="robots" content="index, follow">
+<meta name="author" content="LARA.ai">
+<link rel="canonical" href="https://lara-ai.in/scan-to-call-qr-generator.html">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="LARA.ai">
+<meta property="og:title" content="Free Scan-to-Call QR Code Generator | LARA.ai">
+<meta property="og:description" content="Turn any phone number into a scannable call button. Free, offline, no signup — download a print-ready QR card in seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lara-ai.in/scan-to-call-qr-generator.html">
+<meta property="og:image" content="https://lara-ai.in/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Scan-to-Call QR Code Generator | LARA.ai">
+<meta name="twitter:description" content="Turn any phone number into a scannable call button. Free, offline, no signup — download a print-ready QR card in seconds.">
+<meta name="twitter:image" content="https://lara-ai.in/logo/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" href="logo/lara-mark.svg" type="image/svg+xml">
+<link rel="shortcut icon" href="logo/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+<link rel="apple-touch-icon" sizes="128x128" href="logo/favicon-128.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Scan-to-Call QR Code Generator",
+  "url": "https://lara-ai.in/scan-to-call-qr-generator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (Web Browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "publisher": { "@type": "Organization", "name": "LARA.ai", "url": "https://lara-ai.in/" },
+  "description": "Free online tool to create a Scan-to-Call QR code for any phone number and download a print-ready A6 PDF card. No signup, no payment, works offline in the browser."
+}
+</script>
+
+<style>
+  :root {
+    --black:        #0a0a0a;
+    --white:        #ffffff;
+    --accent:       #FF4D00;
+    --accent-light: #FF6B2B;
+    --grey-100:     #f5f5f3;
+    --grey-200:     #e8e8e5;
+    --grey-400:     #9a9a95;
+    --grey-700:     #3a3a37;
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--grey-100);
+    color: var(--black);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  a { color: var(--accent); }
+
+  /* Top bar */
+  .topbar {
+    background: var(--black);
+    padding: 14px 20px;
+  }
+  .topbar-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .topbar-inner img { width: 30px; height: 30px; }
+  .topbar-inner span {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--white);
+    font-size: 1.05rem;
+  }
+  .topbar-inner a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .topbar-back {
+    margin-left: auto !important;
+    color: var(--grey-400) !important;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .topbar-back:hover { color: var(--white) !important; }
+
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .intro { max-width: 720px; margin: 0 auto 44px; text-align: center; }
+  .intro h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 16px;
+  }
+  .intro h1 .accent { color: var(--accent); }
+  .intro p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--grey-700);
+    margin: 0 0 18px;
+  }
+  .trust-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .trust-points li {
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: var(--white);
+    border: 1px solid var(--grey-200);
+    border-radius: 999px;
+    padding: 6px 14px;
+    color: var(--grey-700);
+  }
+
+  /* Tool layout */
+  .tool {
+    display: grid;
+    grid-template-columns: minmax(0, 380px) minmax(0, 340px);
+    gap: 32px;
+    align-items: start;
+    justify-content: center;
+  }
+  @media (max-width: 780px) {
+    .tool { grid-template-columns: 1fr; justify-items: center; }
+  }
+
+  .panel {
+    background: var(--white);
+    border: 1px solid var(--grey-200);
+    border-radius: 16px;
+    padding: 28px;
+    width: 100%;
+  }
+
+  .panel h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--grey-700);
+    margin-bottom: 6px;
+  }
+
+  .field { margin-bottom: 18px; }
+
+  .phone-row {
+    display: flex;
+    gap: 8px;
+  }
+  select, input[type="tel"], input[type="text"] {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 12px 12px;
+    border: 1.5px solid var(--grey-200);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--black);
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  select { flex: 0 0 118px; cursor: pointer; }
+  input[type="tel"] { flex: 1; min-width: 0; }
+  select:focus, input:focus { border-color: var(--accent); }
+
+  .error-msg {
+    color: #c0392b;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    min-height: 1em;
+  }
+
+  button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.15s, opacity 0.15s;
+  }
+  .btn-primary {
+    background: var(--black);
+    color: var(--white);
+  }
+  .btn-primary:hover { background: #222; }
+  .btn-accent {
+    background: var(--accent);
+    color: var(--white);
+    margin-top: 4px;
+  }
+  .btn-accent:hover { background: var(--accent-light); }
+  .btn-accent:disabled {
+    background: var(--grey-200);
+    color: var(--grey-400);
+    cursor: not-allowed;
+  }
+
+  .hint {
+    font-size: 0.75rem;
+    color: var(--grey-400);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* Preview card */
+  .preview-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .card-outer {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 105 / 148;
+    background: var(--white);
+    border: 1px solid var(--grey-200);
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgba(10,10,10,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6% 7%;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-outer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: var(--accent);
+  }
+  .card-headline {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(0.95rem, 5.5cqw, 1.15rem);
+    text-align: center;
+    margin: 14% 0 8%;
+    line-height: 1.15;
+  }
+  .card-qr-box {
+    width: 68%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grey-100);
+    border-radius: 4px;
+  }
+  .card-qr-box canvas { width: 100%; height: 100%; image-rendering: pixelated; }
+  .card-qr-placeholder {
+    font-size: 0.7rem;
+    color: var(--grey-400);
+    text-align: center;
+    padding: 10%;
+    font-family: var(--font-body);
+  }
+  .card-phone {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(0.8rem, 4.5cqw, 1rem);
+    letter-spacing: 0.02em;
+    margin-top: 6%;
+    color: var(--black);
+  }
+  .card-fallback {
+    font-size: 0.62rem;
+    color: var(--grey-400);
+    margin-top: 2%;
+  }
+  .card-footer {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .card-footer img { width: 16px; height: 16px; }
+  .card-footer span {
+    font-size: 0.5rem;
+    color: var(--grey-400);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .lead-field {
+    width: 100%;
+    max-width: 300px;
+  }
+  .lead-field label { text-align: left; }
+
+  footer.site-footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    font-size: 0.78rem;
+    color: var(--grey-400);
+  }
+  footer.site-footer a { color: var(--grey-700); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="https://lara-ai.in/" aria-label="LARA.ai home">
+      <img src="logo/lara-mark.svg" alt="LARA.ai logo">
+      <span>LARA.ai</span>
+    </a>
+    <a class="topbar-back" href="https://lara-ai.in/">&larr; Back to lara-ai.in</a>
+  </div>
+</div>
+
+<main>
+  <div class="intro">
+    <h1>Free <span class="accent">Scan-to-Call</span> QR Code Generator</h1>
+    <p>
+      Turn any phone number into a scannable call button. This free Scan-to-Call QR code
+      generator for India creates a call QR code for your phone number in seconds — no
+      signup, no payment, and nothing ever leaves your browser. Perfect for shop counters,
+      visiting cards, delivery packaging, and event booths. Generate your QR code, preview a
+      print-ready A6 card, and download it as a PDF instantly.
+    </p>
+    <ul class="trust-points">
+      <li>100% free</li>
+      <li>No signup required</li>
+      <li>Works fully offline</li>
+      <li>Print-ready A6 PDF</li>
+    </ul>
+  </div>
+
+  <div class="tool">
+    <div class="panel">
+      <h2>1. Enter your phone number</h2>
+      <form id="qrForm" novalidate>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <div class="phone-row">
+            <select id="countryCode" aria-label="Country code">
+              <option value="91" selected>🇮🇳 +91</option>
+              <option value="1">🇺🇸 +1</option>
+              <option value="44">🇬🇧 +44</option>
+              <option value="971">🇦🇪 +971</option>
+              <option value="65">🇸🇬 +65</option>
+              <option value="61">🇦🇺 +61</option>
+              <option value="49">🇩🇪 +49</option>
+              <option value="33">🇫🇷 +33</option>
+              <option value="81">🇯🇵 +81</option>
+              <option value="86">🇨🇳 +86</option>
+              <option value="966">🇸🇦 +966</option>
+              <option value="974">🇶🇦 +974</option>
+              <option value="92">🇵🇰 +92</option>
+              <option value="880">🇧🇩 +880</option>
+              <option value="94">🇱🇰 +94</option>
+              <option value="977">🇳🇵 +977</option>
+              <option value="27">🇿🇦 +27</option>
+              <option value="234">🇳🇬 +234</option>
+              <option value="55">🇧🇷 +55</option>
+              <option value="52">🇲🇽 +52</option>
+            </select>
+            <input type="tel" id="phone" inputmode="tel" placeholder="98765 43210" autocomplete="tel-national">
+          </div>
+          <div class="error-msg" id="phoneError" role="alert" aria-live="polite"></div>
+        </div>
+        <button type="submit" class="btn-primary">Generate QR Code</button>
+      </form>
+
+      <div class="field" style="margin-top: 24px;">
+        <label for="orgName">Business / organisation name (optional)</label>
+        <input type="text" id="orgName" placeholder="e.g. Sharma General Store">
+        <div class="hint">Used only for our internal record of who created a card — never shown on the card and never required.</div>
+      </div>
+
+      <button type="button" class="btn-accent" id="downloadBtn" disabled>Download PDF</button>
+      <div class="hint">Generate a QR code above first, then download your print-ready A6 card.</div>
+    </div>
+
+    <div class="preview-wrap">
+      <div class="panel" style="display:flex; flex-direction:column; align-items:center;">
+        <h2 style="align-self:flex-start;">2. Live preview</h2>
+        <div class="card-outer" id="cardOuter" style="container-type: inline-size;">
+          <div class="card-headline">Scan to Call Me</div>
+          <div class="card-qr-box" id="qrBox">
+            <div class="card-qr-placeholder" id="qrPlaceholder">Your QR code will appear here</div>
+            <canvas id="qrCanvas" hidden></canvas>
+          </div>
+          <div class="card-phone" id="cardPhone" hidden></div>
+          <div class="card-fallback" id="cardFallback" hidden>Can't scan? Dial the number above</div>
+          <div class="card-footer">
+            <img src="logo/lara-mark.svg" alt="LARA.ai">
+            <span>Powered by LARA.ai — lara-ai.in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  Made by <a href="https://lara-ai.in/">LARA.ai</a> — Software. AI. Growth. · New Delhi, India
+</footer>
+
+<!-- QR matrix generator (kazuhikoarase/qrcode-generator) — pure JS, exposes raw module matrix for crisp vector rendering -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<!-- jsPDF — client-side, vector-capable PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- Configuration -------------------------------------------------
+  // Optional lead-capture webhook (e.g. a Google Apps Script Web App URL
+  // that appends a row to a Google Sheet). Leave the placeholder value in
+  // place to disable logging entirely — the Download PDF button will
+  // simply skip the fetch call. Logging NEVER blocks or delays the
+  // download, even if this URL is wrong or the request fails.
+  var LEAD_WEBHOOK_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+  var LOGO_DATA_URI = "data:image/png;base64,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";
+
+  // ---- Elements --------------------------------------------------------
+  var form         = document.getElementById("qrForm");
+  var countrySel    = document.getElementById("countryCode");
+  var phoneInput    = document.getElementById("phone");
+  var phoneError    = document.getElementById("phoneError");
+  var orgInput      = document.getElementById("orgName");
+  var downloadBtn   = document.getElementById("downloadBtn");
+
+  var qrBox         = document.getElementById("qrBox");
+  var qrPlaceholder = document.getElementById("qrPlaceholder");
+  var qrCanvas      = document.getElementById("qrCanvas");
+  var cardPhone     = document.getElementById("cardPhone");
+  var cardFallback  = document.getElementById("cardFallback");
+
+  var currentQR = null;      // qrcode-generator instance
+  var currentTel = "";       // tel:+91XXXXXXXXXX
+  var currentDisplay = "";   // +91 98765 43210
+  var debounceTimer = null;
+
+  // ---- Validation --------------------------------------------------
+  function cleanDigits(raw) {
+    return (raw || "").replace(/[^\d]/g, "");
+  }
+
+  function validatePhone() {
+    var raw = phoneInput.value.trim();
+    if (!raw) return { ok: false, silent: true };
+
+    if (!/^[\d\s\-()]+$/.test(raw)) {
+      return { ok: false, message: "Phone number can only contain digits." };
+    }
+    var digits = cleanDigits(raw);
+    if (digits.length < 10) {
+      return { ok: false, message: "Enter at least 10 digits." };
+    }
+    if (digits.length > 15) {
+      return { ok: false, message: "That's too many digits for a phone number." };
+    }
+    return { ok: true, digits: digits };
+  }
+
+  // ---- QR rendering --------------------------------------------------
+  function buildQR(text) {
+    var qr = qrcode(0, "M"); // type 0 = auto-size, M = medium error correction
+    qr.addData(text);
+    qr.make();
+    return qr;
+  }
+
+  function drawQRToCanvas(qr, canvas) {
+    var count = qr.getModuleCount();
+    var quiet = 2;
+    var total = count + quiet * 2;
+    var px = 480; // internal render resolution for a crisp on-screen preview
+    var moduleSize = px / total;
+
+    canvas.width = px;
+    canvas.height = px;
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, px, px);
+    ctx.fillStyle = "#0a0a0a";
+
+    for (var r = 0; r < count; r++) {
+      for (var c = 0; c < count; c++) {
+        if (qr.isDark(r, c)) {
+          var x = (quiet + c) * moduleSize;
+          var y = (quiet + r) * moduleSize;
+          ctx.fillRect(Math.floor(x), Math.floor(y), Math.ceil(moduleSize) + 1, Math.ceil(moduleSize) + 1);
+        }
+      }
+    }
+  }
+
+  function formatDisplay(cc, digits) {
+    return "+" + cc + " " + digits;
+  }
+
+  function renderPreview() {
+    var result = validatePhone();
+
+    if (!result.ok) {
+      phoneError.textContent = result.silent ? "" : result.message;
+      qrPlaceholder.hidden = false;
+      qrCanvas.hidden = true;
+      cardPhone.hidden = true;
+      cardFallback.hidden = true;
+      downloadBtn.disabled = true;
+      currentQR = null;
+      return;
+    }
+
+    phoneError.textContent = "";
+    var cc = countrySel.value;
+    currentTel = "tel:+" + cc + result.digits;
+    currentDisplay = formatDisplay(cc, result.digits);
+
+    currentQR = buildQR(currentTel);
+    drawQRToCanvas(currentQR, qrCanvas);
+
+    qrPlaceholder.hidden = true;
+    qrCanvas.hidden = false;
+    cardPhone.hidden = false;
+    cardPhone.textContent = currentDisplay;
+    cardFallback.hidden = false;
+    downloadBtn.disabled = false;
+  }
+
+  function debouncedRender() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(renderPreview, 200);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    renderPreview();
+  });
+  phoneInput.addEventListener("input", debouncedRender);
+  countrySel.addEventListener("change", renderPreview);
+
+  // ---- PDF export (vector QR + vector text, raster logo) ---------------
+  function drawQRToPDF(doc, qr, xMM, yMM, sizeMM) {
+    var count = qr.getModuleCount();
+    var quiet = 2;
+    var total = count + quiet * 2;
+    var moduleMM = sizeMM / total;
+
+    doc.setFillColor(255, 255, 255);
+    doc.rect(xMM, yMM, sizeMM, sizeMM, "F");
+    doc.setFillColor(10, 10, 10);
+
+    for (var r = 0; r < count; r++) {
+      for (var c = 0; c < count; c++) {
+        if (qr.isDark(r, c)) {
+          var x = xMM + (quiet + c) * moduleMM;
+          var y = yMM + (quiet + r) * moduleMM;
+          doc.rect(x, y, moduleMM + 0.02, moduleMM + 0.02, "F");
+        }
+      }
+    }
+  }
+
+  function buildPDF() {
+    var jsPDFCtor = window.jspdf && window.jspdf.jsPDF;
+    if (!jsPDFCtor || !currentQR) return null;
+
+    var W = 105, H = 148; // A6 portrait, mm
+    var doc = new jsPDFCtor({ unit: "mm", format: [W, H], orientation: "portrait" });
+
+    // top accent bar
+    doc.setFillColor(255, 77, 0);
+    doc.rect(0, 0, W, 3, "F");
+
+    // headline
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(19);
+    doc.setTextColor(10, 10, 10);
+    doc.text("Scan to Call Me", W / 2, 24, { align: "center" });
+
+    // QR code, vector
+    var qrSize = 62;
+    var qrX = (W - qrSize) / 2;
+    var qrY = 32;
+    drawQRToPDF(doc, currentQR, qrX, qrY, qrSize);
+
+    // phone number
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(14);
+    doc.text(currentDisplay, W / 2, qrY + qrSize + 12, { align: "center" });
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(8.5);
+    doc.setTextColor(120, 120, 115);
+    doc.text("Can't scan? Dial the number above", W / 2, qrY + qrSize + 18, { align: "center" });
+
+    // footer: logo + powered-by, bottom right, clickable
+    var footerY = H - 10;
+    var logoSize = 7;
+    var footerText = "Powered by LARA.ai — lara-ai.in";
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7.5);
+    doc.setTextColor(120, 120, 115);
+    var textWidth = doc.getTextWidth(footerText);
+    var footerRightMargin = 8;
+    var textX = W - footerRightMargin - textWidth;
+    var logoX = textX - logoSize - 2;
+
+    try {
+      doc.addImage(LOGO_DATA_URI, "PNG", logoX, footerY - logoSize + 1.5, logoSize, logoSize);
+    } catch (err) { /* logo embed is best-effort; never block the PDF */ }
+
+    doc.textWithLink(footerText, textX, footerY + 4, { url: "https://lara-ai.in/" });
+
+    return doc;
+  }
+
+  function downloadPDF() {
+    var doc = buildPDF();
+    if (!doc) return;
+    var digitsOnly = currentDisplay.replace(/[^\d]/g, "");
+    doc.save("scan-to-call-" + digitsOnly + ".pdf");
+  }
+
+  function maybeLogLead() {
+    var orgName = orgInput.value.trim();
+    if (!orgName) return;
+    if (!LEAD_WEBHOOK_URL || LEAD_WEBHOOK_URL.indexOf("PASTE_YOUR_") === 0) return;
+
+    try {
+      fetch(LEAD_WEBHOOK_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          business: orgName,
+          phone: currentDisplay,
+          source: "scan-to-call-qr-generator",
+          timestamp: new Date().toISOString()
+        })
+      }).catch(function () { /* never surfaced to the user */ });
+    } catch (err) { /* fetch itself throwing must not block the download */ }
+  }
+
+  downloadBtn.addEventListener("click", function () {
+    if (!currentQR) return;
+    maybeLogLead();   // fire-and-forget, never awaited
+    downloadPDF();    // always runs regardless of the log call's outcome
+  });
+
+})();
+</script>
+
+</body>
+</html>
