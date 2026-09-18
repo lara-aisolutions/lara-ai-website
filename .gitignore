@@ -46,3 +46,6 @@ Office_Stationaries/
 
 # Letterhead source
 LARA-ai Letterhead*.docx
+
+# Scan-to-Call QR tool test output — contains real phone numbers, never push
+scan-to-call-*.pdf

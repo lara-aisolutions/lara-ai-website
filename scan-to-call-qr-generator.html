@@ -528,7 +528,7 @@
 
   function drawQRToCanvas(qr, canvas) {
     var count = qr.getModuleCount();
-    var quiet = 2;
+    var quiet = 4; // QR spec minimum quiet zone — thinner borders risk misreads on some scanners
     var total = count + quiet * 2;
     var px = 480; // internal render resolution for a crisp on-screen preview
     var moduleSize = px / total;
@@ -610,7 +610,7 @@
   // ---- PDF export (vector QR + vector text, raster logo) ---------------
   function drawQRToPDF(doc, qr, xMM, yMM, sizeMM) {
     var count = qr.getModuleCount();
-    var quiet = 2;
+    var quiet = 4; // QR spec minimum quiet zone — thinner borders risk misreads on some scanners
     var total = count + quiet * 2;
     var moduleMM = sizeMM / total;
 
