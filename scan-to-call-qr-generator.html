@@ -382,8 +382,13 @@
 
   <div class="tool">
     <div class="panel">
-      <h2>1. Enter your phone number</h2>
+      <h2>1. Customize your card</h2>
       <form id="qrForm" novalidate>
+        <div class="field">
+          <label for="headline">Card headline</label>
+          <input type="text" id="headline" maxlength="50" value="Scan to Call Me" placeholder="e.g. Blocking my car? Scan to call">
+          <div class="hint">Also works as a parking card: try "Blocking my car? Scan to call" for your dashboard.</div>
+        </div>
         <div class="field">
           <label for="phone">Phone number</label>
           <div class="phone-row">
@@ -430,7 +435,7 @@
       <div class="panel" style="display:flex; flex-direction:column; align-items:center;">
         <h2 style="align-self:flex-start;">2. Live preview</h2>
         <div class="card-outer" id="cardOuter" style="container-type: inline-size;">
-          <div class="card-headline">Scan to Call Me</div>
+          <div class="card-headline" id="cardHeadline">Scan to Call Me</div>
           <div class="card-qr-box" id="qrBox">
             <div class="card-qr-placeholder" id="qrPlaceholder">Your QR code will appear here</div>
             <canvas id="qrCanvas" hidden></canvas>
@@ -472,6 +477,7 @@
 
   // ---- Elements --------------------------------------------------------
   var form         = document.getElementById("qrForm");
+  var headlineInput = document.getElementById("headline");
   var countrySel    = document.getElementById("countryCode");
   var phoneInput    = document.getElementById("phone");
   var phoneError    = document.getElementById("phoneError");
@@ -481,6 +487,7 @@
   var qrBox         = document.getElementById("qrBox");
   var qrPlaceholder = document.getElementById("qrPlaceholder");
   var qrCanvas      = document.getElementById("qrCanvas");
+  var cardHeadline  = document.getElementById("cardHeadline");
   var cardPhone     = document.getElementById("cardPhone");
   var cardFallback  = document.getElementById("cardFallback");
 
@@ -548,6 +555,14 @@
     return "+" + cc + " " + digits;
   }
 
+  function getHeadline() {
+    return headlineInput.value.trim() || "Scan to Call Me";
+  }
+
+  function syncHeadline() {
+    cardHeadline.textContent = getHeadline();
+  }
+
   function renderPreview() {
     var result = validatePhone();
 
@@ -589,6 +604,8 @@
   });
   phoneInput.addEventListener("input", debouncedRender);
   countrySel.addEventListener("change", renderPreview);
+  headlineInput.addEventListener("input", syncHeadline);
+  syncHeadline();
 
   // ---- PDF export (vector QR + vector text, raster logo) ---------------
   function drawQRToPDF(doc, qr, xMM, yMM, sizeMM) {
@@ -623,16 +640,28 @@
     doc.setFillColor(255, 77, 0);
     doc.rect(0, 0, W, 3, "F");
 
-    // headline
+    // headline — wraps to fit long custom text (e.g. a parking-notice headline)
+    var headlineFontSize = 19;
+    var headlineMaxWidth = W - 24; // 12mm side margins
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(19);
+    doc.setFontSize(headlineFontSize);
     doc.setTextColor(10, 10, 10);
-    doc.text("Scan to Call Me", W / 2, 24, { align: "center" });
+    var headlineLines = doc.splitTextToSize(getHeadline(), headlineMaxWidth);
+    if (headlineLines.length > 2) {
+      headlineFontSize = 15;
+      doc.setFontSize(headlineFontSize);
+      headlineLines = doc.splitTextToSize(getHeadline(), headlineMaxWidth);
+    }
+    var headlineLineHeight = headlineFontSize * 0.42; // mm per line, approx
+    var headlineTop = 15;
+    headlineLines.forEach(function (line, i) {
+      doc.text(line, W / 2, headlineTop + i * headlineLineHeight, { align: "center" });
+    });
 
     // QR code, vector
     var qrSize = 62;
     var qrX = (W - qrSize) / 2;
-    var qrY = 32;
+    var qrY = headlineTop + headlineLines.length * headlineLineHeight + 8;
     drawQRToPDF(doc, currentQR, qrX, qrY, qrSize);
 
     // phone number
